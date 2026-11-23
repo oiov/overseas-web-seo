@@ -1,0 +1,32 @@
+{
+  "name": "overseas-web-seo",
+  "version": "1.0.0",
+  "description": "出海 SEO + GEO 实战 skill：找词判词、新词站 SOP、养老站、AI 搜索、外链与流量诊断",
+  "type": "module",
+  "bin": {
+    "overseas-web-seo": "bin/cli.mjs"
+  },
+  "files": [
+    "SKILL.md",
+    "references/",
+    "scripts/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "seo",
+    "geo",
+    "agent-skill",
+    "claude-code",
+    "keyword-research"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oiov/overseas-web-seo.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

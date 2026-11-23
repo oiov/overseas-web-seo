@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="出海 SEO + GEO：新词站拼速度，养老站拼时间" width="100%">
+</p>
+
 # 出海 SEO 与 GEO 实战 Skill
 
 给 AI Agent 用的一套**出海网站 SEO + GEO 工作流**：从找词、判词，到新词站当天上线、养老站长期养护，再到 AI 搜索引用、外链与流量诊断。
@@ -37,21 +41,48 @@
 | 外链与站外推荐 | 冷启动路径、竞品外链逆向、成果按漏斗记录、现行政策红线 |
 | 流量或排名下滑 | 需求退潮 vs 排名下降的判别表、算法更新窗口、恢复动作顺序 |
 
-## 快速开始
+## 安装
 
-### Claude Code / Claude Agent
+### 一句话安装（推荐）
 
 ```bash
-git clone https://github.com/oiov/overseas-web-seo.git ~/.claude/skills/overseas-web-seo
+npx skills add oiov/overseas-web-seo
+```
+
+`skills` CLI 会克隆这个仓库，自动识别你本机的 Agent（Claude Code、Codex、Cursor 等），把 skill 装到对应目录。不需要注册、不需要上传、不需要 npm 账号——仓库本身就是分发包。
+
+常用参数：
+
+```bash
+npx skills add oiov/overseas-web-seo -g     # 装到用户级，所有项目都能用
+npx skills list                            # 看已安装的 skill
+npx skills update                          # 更新到最新版本
 ```
 
 装好后直接用自然语言提问，skill 会被自动加载：
 
 > 帮我看下 "ai headshot generator" 这个词还值不值得做，按新词站还是养老站？
 
-### Codex / 其他支持 AGENTS 类约定的 Agent
+### 手动安装
 
-把仓库克隆到该 Agent 的 skills 目录，或在项目的 `AGENTS.md` / 系统提示里加一行（路径按你的实际位置改）：
+```bash
+# Claude Code
+git clone https://github.com/oiov/overseas-web-seo.git ~/.claude/skills/overseas-web-seo
+
+# Codex
+git clone https://github.com/oiov/overseas-web-seo.git ~/.codex/skills/overseas-web-seo
+```
+
+或者用本仓库自带的 npm 包（需要 Node 18+）：
+
+```bash
+npx overseas-web-seo                        # 默认装到 ~/.claude/skills
+npx overseas-web-seo --dir ~/.codex/skills  # 指定目录
+```
+
+### 其他 Agent
+
+在项目的 `AGENTS.md` / 系统提示里加一行（路径按你的实际位置改）：
 
 ```markdown
 涉及海外站 SEO、GEO、找词判词、外链与流量诊断时，先读 <skills 目录>/overseas-web-seo/SKILL.md，再按其中的"按任务读取"表加载对应 references。
